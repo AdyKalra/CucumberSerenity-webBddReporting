@@ -1,0 +1,77 @@
+<acceptance-test-run title="Search for many company , jobs etc.. by keyword" name="Search for many company , jobs etc.. by keyword" description="" steps="8" successful="8" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="77880" timestamp="2016-05-10T13:24:16.554+10:00" session-id="79aac10ba00172bba9f0d522dac29a28">
+  <user-story id="search-by-keyword" name="Search by keyword" path="src/test/resources/features/search/search_by_keyword.feature"/>
+  <issues>
+    <issue>ETSY-102</issue>
+    <issue>ETSY-102</issue>
+    <issue>ETSY-102</issue>
+    <issue>ETSY-102</issue>
+    <issue>ETSY-102</issue>
+  </issues>
+  <versions>
+    <version>Release-2</version>
+  </versions>
+  <tags>
+    <tag name="ui" type="component"/>
+    <tag name="Search" type="epic"/>
+    <tag name="Search/Search by keyword" type="feature"/>
+    <tag name="ETSY-102" type="issue"/>
+    <tag name="runThis" type="tag"/>
+    <tag name="Release-2" type="version"/>
+  </tags>
+  <examples>
+    <datasets>
+      <dataset startRow="0" rowCount="0" name="" description=""/>
+    </datasets>
+    <headers>
+      <header>company</header>
+    </headers>
+    <rows>
+      <row result="SUCCESS">
+        <value>LinkedIn</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Google</value>
+      </row>
+    </rows>
+  </examples>
+  <test-group name="[1] {company=LinkedIn}" result="SUCCESS">
+    <test-group name="Given I would like to search about a company" result="SUCCESS">
+      <test-step result="SUCCESS" duration="10749">
+        <description>Opens home page</description>
+      </test-step>
+      <test-step result="SUCCESS" duration="16954">
+        <description>Logs into the application</description>
+      </test-step>
+    </test-group>
+    <test-group name="When I search for &apos;LinkedIn&apos;" result="SUCCESS">
+      <test-step result="SUCCESS" duration="3068">
+        <description>Searches by keyword: &lt;span class=&apos;step-parameter&apos;&gt;LinkedIn&lt;/span&gt;</description>
+      </test-step>
+    </test-group>
+    <test-group name="Then I should see only items related to &apos;LinkedIn&apos;" result="SUCCESS">
+      <test-step result="SUCCESS" duration="7985">
+        <description>Should see results summary containing: &lt;span class=&apos;step-parameter&apos;&gt;LinkedIn&lt;/span&gt;</description>
+      </test-step>
+    </test-group>
+  </test-group>
+  <test-group name="[1] {company=Google}" result="SUCCESS">
+    <test-group name="Given I would like to search about a company" result="SUCCESS">
+      <test-step result="SUCCESS" duration="8768">
+        <description>Opens home page</description>
+      </test-step>
+      <test-step result="SUCCESS" duration="17787">
+        <description>Logs into the application</description>
+      </test-step>
+    </test-group>
+    <test-group name="When I search for &apos;Google&apos;" result="SUCCESS">
+      <test-step result="SUCCESS" duration="2459">
+        <description>Searches by keyword: &lt;span class=&apos;step-parameter&apos;&gt;Google&lt;/span&gt;</description>
+      </test-step>
+    </test-group>
+    <test-group name="Then I should see only items related to &apos;Google&apos;" result="SUCCESS">
+      <test-step result="SUCCESS" duration="8374">
+        <description>Should see results summary containing: &lt;span class=&apos;step-parameter&apos;&gt;Google&lt;/span&gt;</description>
+      </test-step>
+    </test-group>
+  </test-group>
+</acceptance-test-run>

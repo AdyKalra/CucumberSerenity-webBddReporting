@@ -1,0 +1,36 @@
+<acceptance-test-run title="Like to stay in touch" name="Like to stay in touch" description="" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="211222" timestamp="2016-05-10T13:20:09.872+10:00" session-id="bfee15f9d7b1e9941fc6bfb5e0ad1576">
+  <user-story id="use-the-like-functionality-to-stay-in-touch" name="Use the Like functionality to stay in touch" path="src/test/resources/features/keep_in_touch/keep_in_touch_by_likes.feature"/>
+  <issues>
+    <issue>ETSY-103</issue>
+  </issues>
+  <versions>
+    <version>Release-2</version>
+  </versions>
+  <tags>
+    <tag name="ui" type="component"/>
+    <tag name="Keep in touch" type="epic"/>
+    <tag name="Keep in touch/Use the like functionality to stay in touch" type="feature"/>
+    <tag name="Use the Like functionality to stay in touch" type="feature"/>
+    <tag name="ETSY-103" type="issue"/>
+    <tag name="runThis" type="tag"/>
+    <tag name="Release-2" type="version"/>
+  </tags>
+  <test-group name="Given I am on the home page" result="SUCCESS">
+    <test-step result="SUCCESS" duration="10858">
+      <description>Opens home page</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="18689">
+      <description>Logs into the application</description>
+    </test-step>
+  </test-group>
+  <test-group name="When I click on likes" result="SUCCESS">
+    <test-step result="SUCCESS" duration="180999">
+      <description>Clicks on likes until nomore</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then I should like until I have no more options" result="SUCCESS">
+    <test-step result="SUCCESS" duration="554">
+      <description>Should see people you may know</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

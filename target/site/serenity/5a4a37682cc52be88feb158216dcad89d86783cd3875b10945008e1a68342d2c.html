@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Release-2</title>
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.css" rel="Stylesheet"/>
+<link type="text/css" href="css/tables.css" rel="stylesheet" />
+
+<script type="text/javascript" src="datatables/1.10.4/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.min.js"></script><!--[if IE]>
+<script language="javascript" type="text/javascript" src="excanvas/3/excanvas.compiled.js"></script>
+<![endif]--><!-- jQtree -->
+<script src="jqtree/0.22/tree.jquery.js"></script>
+<link rel="stylesheet" href="jqtree/0.22/jqtree.css">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".read-more-link").click(function () {
+                $(this).nextAll("div.read-more-text").toggle();
+                var isrc = $(this).find("img").attr('src');
+                if (isrc == 'images/plus.png') {
+                    $(this).find("img").attr("src", function () {
+                        return "images/minus.png";
+                    });
+                } else {
+                    $(this).find("img").attr("src", function () {
+                        return "images/plus.png";
+                    });
+                }
+            });
+            // Results table
+            $('#req-results-table').DataTable({
+                "order": [
+                    [ 2, "asc" ]
+                ],
+                "pageLength": 25
+            });
+
+            // Results table
+            $('#release-test-results-table').DataTable({
+                "order": [
+                    [ 2, "asc" ]
+                ]
+            });
+
+            $("#tabs").tabs();
+            $("#test-tabs").tabs();
+        });
+    </script>
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">LinkedIn Project using Serenity and Cucumber</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="bluetext"><a href="releases.html" class="bluetext">Releases</a>
+                >
+            Release-2
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="fa fa-paper-plane"></i> Releases</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="0272dadd83d6e6ac748d9a947522ca78b8873f5156f9bd38d6a0eb735ee5993b.html"><i class="fa fa-comments-o"></i> Epics</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-05-2016 14:42</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="middlb">
+            <div class="table">
+            <div>
+                <div id="releases">
+                    <h3>Release Details</h3>
+                    <table>
+                        <tr>
+                            <td valign="top">
+                                &nbsp:
+                            </td>
+                            <td class="release-context-tree">
+                                <div id="release-tree"></div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <script>
+                        var releaseData = [
+  {
+    "releaseTag": {
+      "name": "Release-2",
+      "type": "version"
+    },
+    "children": [],
+    "label": "Release-2",
+    "reportName": "5a4a37682cc52be88feb158216dcad89d86783cd3875b10945008e1a68342d2c.html",
+    "parents": []
+  }
+];
+                        $(function () {
+                            $('#release-tree').tree({
+                                data: releaseData
+                            });
+                        });
+
+                        $('#release-tree').bind(
+                                'tree.click',
+                                function (event) {
+                                    window.location.href = event.node.reportName;
+                                }
+                        );
+
+                    </script>
+
+                    <div>
+                    </div>
+
+                    <div id="release-coverage">
+                        <div id="tabs">
+                            <ul>
+                                <li class="requirementTitle">
+                                    <a href="#tabs-1">Scheduled Requirements</a></li>
+                            </ul>
+                            <!----->
+
+                            <div id="tabs-1" class="capabilities-table table">
+                                <div id="req_list_tests" class="table">
+                                    <div class="test-results">
+                                        <table id="req-results-table">
+                                            <thead>
+                                            <tr>
+                                                <th width="40" class="test-results-heading">&nbsp;</th>
+                                                    <th width="500" class="test-results-heading">Features</th>
+                                                <th class="test-results-heading" width="50px">Total.<br/>Tests</th>
+                                                <th class="test-results-heading" width="50px">%Pass</th>
+                                                <th class="test-results-heading" width="50px">Auto.<br/>Tests</th>
+                                                <th class="test-results-heading" width="50px">%Pass</th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-check icon-large"
+                                                        title="Tests passed (automated)"></i></th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-ban-circle icon-large"
+                                                        title="Tests skipped or pending (automated)"></th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-thumbs-down icon-large"
+                                                        title="Tests failed (automated)"></th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-exclamation-sign icon-large"
+                                                        title="Tests failed with an error (automated)"></th>
+                                                <th class="test-results-heading" width="50">Manual<br/>Tests</th>
+                                                <th class="test-results-heading" width="50px">%Pass</th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-check icon-large" title="Tests passed (manual)"></i>
+                                                </th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-ban-circle icon-large"
+                                                        title="Tests skipped or pending (manual)"></th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-thumbs-down icon-large"
+                                                        title="Tests failed (manual)"></th>
+                                                <th class="test-results-heading" width="25px"><i
+                                                        class="icon-exclamation-sign icon-large"
+                                                        title="Tests failed with an error (manual)"></th>
+                                            </tr>
+                                            <tbody>
+
+
+                                            <tr class="test-SUCCESS requirementRow">
+                                                <td class="requirementRowCell">
+                                                    <img src="images/traffic-green.gif" class="summary-icon"
+                                                         title="SUCCESS"/>
+                                                    <span style="display:none">3</span>
+                                                </td>
+                                                <td class="release-title">
+                                                    <a href="00e7ccb68db7a2347c589c6fdd15996f10230fee906c2c943c8a0e447252799f.html">Jobs</a>
+                                                </td>
+
+
+
+
+
+
+
+                                                <td class="greentext highlighted-value">1</td>
+                                                <td class="greentext">100% </td>
+                                                <td class="greentext highlighted-value">1</td>
+                                                <td class="greentext">100% </td>
+                                                <td class="greentext">1</td>
+                                                <td class="bluetext">0</td>
+                                                <td class="redtext">0</td>
+                                                <td class="lightorangetext">0</td>
+                                                    <td class="bluetext highlighted-value">0</td>
+                                                    <td class="bluetext">0%  </td>
+                                                    <td class="greentext">0</td>
+                                                    <td class="bluetext">0</td>
+                                                    <td class="redtext">0</td>
+                                                    <td class="lightorangetext">0</td>
+                                            </tr>
+
+                                            <tr class="test-SUCCESS requirementRow">
+                                                <td class="requirementRowCell">
+                                                    <img src="images/traffic-green.gif" class="summary-icon"
+                                                         title="SUCCESS"/>
+                                                    <span style="display:none">3</span>
+                                                </td>
+                                                <td class="release-title">
+                                                    <a href="91bb0b8e0135b57b3c51362495530552682d1517d77ee53aa4decf381f0b9e1b.html">Keep in touch</a>
+                                                </td>
+
+
+
+
+
+
+
+                                                <td class="greentext highlighted-value">1</td>
+                                                <td class="greentext">100% </td>
+                                                <td class="greentext highlighted-value">1</td>
+                                                <td class="greentext">100% </td>
+                                                <td class="greentext">1</td>
+                                                <td class="bluetext">0</td>
+                                                <td class="redtext">0</td>
+                                                <td class="lightorangetext">0</td>
+                                                    <td class="bluetext highlighted-value">0</td>
+                                                    <td class="bluetext">0%  </td>
+                                                    <td class="greentext">0</td>
+                                                    <td class="bluetext">0</td>
+                                                    <td class="redtext">0</td>
+                                                    <td class="lightorangetext">0</td>
+                                            </tr>
+
+                                            <tr class="test-SUCCESS requirementRow">
+                                                <td class="requirementRowCell">
+                                                    <img src="images/traffic-green.gif" class="summary-icon"
+                                                         title="SUCCESS"/>
+                                                    <span style="display:none">3</span>
+                                                </td>
+                                                <td class="release-title">
+                                                    <a href="79c25275f8032a5393878c36d7d36c796b7f9250a5a7401d7ccd61db3a103a86.html">Search</a>
+                                                </td>
+
+
+
+
+
+
+
+                                                <td class="greentext highlighted-value">3</td>
+                                                <td class="greentext">100% </td>
+                                                <td class="greentext highlighted-value">3</td>
+                                                <td class="greentext">100% </td>
+                                                <td class="greentext">3</td>
+                                                <td class="bluetext">0</td>
+                                                <td class="redtext">0</td>
+                                                <td class="lightorangetext">0</td>
+                                                    <td class="bluetext highlighted-value">0</td>
+                                                    <td class="bluetext">0%  </td>
+                                                    <td class="greentext">0</td>
+                                                    <td class="bluetext">0</td>
+                                                    <td class="redtext">0</td>
+                                                    <td class="lightorangetext">0</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!----->
+
+                        <div id="test-tabs">
+                            <ul>
+                                <li class="requirementTitle">
+                                    <a href="#test-tabs-1">Tests (5)</a>
+                                </li>
+                            </ul>
+                            <div id="test-tabs-1" class="capabilities-table table">
+                                <div class="table">
+                                    <div class="test-results">
+                                        <table id="release-test-results-table">
+                                            <thead>
+                                            <tr>
+                                                <th width="50px" class="test-results-heading">&nbsp;</th>
+                                                <th class="test-results-heading">Tests</th>
+                                                <th width="70px" class="test-results-heading">Steps</th>
+                                                <th width="100px" class="test-results-heading">Duration<br>(seconds)</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr class="test-SUCCESS">
+                                                    <td>
+                                                        <img src="images/success.png" title="SUCCESS" class="summary-icon"/>
+                                                        <span style="display:none">SUCCESS</span>
+                                                    </td>
+                                                    <td class="SUCCESS-text"><a href="6ddcc3cc8bd7bfd9583a1e3e2189ad2f30caadf136f584e88a1909ce12adcdad.html">Find a job and apply filters (ETSY-104)</a></td>
+
+                                                    <td class="lightgreentext">11</td>
+                                                    <td class="lightgreentext">62.84</td>
+                                                </tr>
+
+                                                <tr class="test-SUCCESS">
+                                                    <td>
+                                                        <img src="images/success.png" title="SUCCESS" class="summary-icon"/>
+                                                        <span style="display:none">SUCCESS</span>
+                                                    </td>
+                                                    <td class="SUCCESS-text"><a href="88c9b1f2a49ffcfe10a28dd9015a45df99ad43411f2ebaab74f9d889623794f4.html">Like to stay in touch (ETSY-103)</a></td>
+
+                                                    <td class="lightgreentext">7</td>
+                                                    <td class="lightgreentext">213.47</td>
+                                                </tr>
+
+                                                <tr class="test-SUCCESS">
+                                                    <td>
+                                                        <img src="images/success.png" title="SUCCESS" class="summary-icon"/>
+                                                        <span style="display:none">SUCCESS</span>
+                                                    </td>
+                                                    <td class="SUCCESS-text"><a href="2cbd69b9afafcbf856ea47b8f893d55586b9467b92c0f027907000fed01f462e.html">Search for many company , jobs etc.. by keyword (ETSY-102)</a></td>
+
+                                                    <td class="lightgreentext">16</td>
+                                                    <td class="lightgreentext">108.2</td>
+                                                </tr>
+
+                                                <tr class="test-SUCCESS">
+                                                    <td>
+                                                        <img src="images/success.png" title="SUCCESS" class="summary-icon"/>
+                                                        <span style="display:none">SUCCESS</span>
+                                                    </td>
+                                                    <td class="SUCCESS-text"><a href="8f661ccb926c0dd7081966f766df2a4c9717b6ec7eeb3218f53d51198d25cc52.html">Search for people by names (ETSY-102)</a></td>
+
+                                                    <td class="lightgreentext">8</td>
+                                                    <td class="lightgreentext">47.51</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="beforefooter"></div>
+    <div id="bottomfooter">
+        <span class="version">Serenity BDD version 1.1.31</span>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<acceptance-test-run title="Search for people by names" name="Search for people by names" description="" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="29533" timestamp="2016-05-10T13:23:44.345+10:00" session-id="8ced795203f488af0d8b82a06be37f08">
+  <user-story id="search-by-keyword" name="Search by keyword" path="src/test/resources/features/search/search_by_keyword.feature"/>
+  <issues>
+    <issue>ETSY-102</issue>
+    <issue>ETSY-102</issue>
+  </issues>
+  <versions>
+    <version>Release-2</version>
+  </versions>
+  <tags>
+    <tag name="ui" type="component"/>
+    <tag name="Search" type="epic"/>
+    <tag name="Search/Search by keyword" type="feature"/>
+    <tag name="ETSY-102" type="issue"/>
+    <tag name="runThis" type="tag"/>
+    <tag name="Release-2" type="version"/>
+  </tags>
+  <examples>
+    <datasets>
+      <dataset startRow="0" rowCount="0" name="" description=""/>
+    </datasets>
+    <headers>
+      <header>name</header>
+    </headers>
+    <rows>
+      <row result="SUCCESS">
+        <value>Aditya Kalra (Ady)</value>
+      </row>
+    </rows>
+  </examples>
+  <test-group name="[1] {name=Aditya Kalra (Ady)}" result="SUCCESS">
+    <test-group name="Given I want to see my own profile" result="SUCCESS">
+      <test-step result="SUCCESS" duration="9230">
+        <description>Opens home page</description>
+      </test-step>
+      <test-step result="SUCCESS" duration="16984">
+        <description>Logs into the application</description>
+      </test-step>
+    </test-group>
+    <test-group name="When I search for &apos;Aditya Kalra (Ady)&apos;" result="SUCCESS">
+      <test-step result="SUCCESS" duration="2858">
+        <description>Searches by keyword: &lt;span class=&apos;step-parameter&apos;&gt;Aditya Kalra (Ady)&lt;/span&gt;</description>
+      </test-step>
+    </test-group>
+    <test-group name="Then I should see only my profile with a tag &apos;You&apos;" result="SUCCESS">
+      <test-step result="SUCCESS" duration="395">
+        <description>Should see tag in results: &lt;span class=&apos;step-parameter&apos;&gt;You&lt;/span&gt;</description>
+      </test-step>
+    </test-group>
+  </test-group>
+</acceptance-test-run>

@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Find jobs based on jobtitle, keywords or company name","Find a job and apply filters","SUCCESS","2016-04-12T17:34:13.535+10:00","0.0","69.07"
+"Use the Like functionality to stay in touch","Like to stay in touch","SUCCESS","2016-04-12T17:35:37.677+10:00","0.0","197.63"
+"Search by keyword","Search for many company , jobs etc.. by keyword","SUCCESS","2016-04-12T17:39:39.083+10:00","0.0","85.83"
+"Search by keyword","Search for people by names","SUCCESS","2016-04-12T17:39:00.551+10:00","0.0","31.11"
