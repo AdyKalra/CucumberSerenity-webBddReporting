@@ -26,7 +26,7 @@ public class LoginPage extends PageObject {
 
     public void login() {
         email.typeAndTab("aditya_kalra@ymail.com");
-        password.typeAndEnter("adyTan77");
+        password.typeAndEnter("password");
     }
 
 
